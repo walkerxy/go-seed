@@ -28,5 +28,30 @@ func main() {
 }
 ```
 
+- 多文件
+```
+package main
+
+func seedFile(filepath string, filename string) {
+	seed := NewSeed(filepath, filename)
+	seed.SetTablePrefix("mc")
+	seed.Fill()
+}
+
+func main() {
+    dir := "./seeds"
+    
+    fileChan := make(chan string)
+	go func() {
+		WalkDir(dir, "yaml", fileChan)
+		close(fileChan)
+	}()
+
+	for file := range fileChan {
+		seedFile(dir, file)
+	}
+}
+```
+
 # License
 MIT
