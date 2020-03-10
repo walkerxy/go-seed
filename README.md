@@ -1,5 +1,5 @@
 # go-seed
-go语言版的数据填充
+go语言版的数据填充，目前只支持mysql数据库及yaml文件
 
 # Install
 go get github.com/walkerxy/go-seed
