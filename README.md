@@ -27,3 +27,6 @@ func main() {
     seed.Fill()
 }
 ```
+
+# License
+MIT
