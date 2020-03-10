@@ -6,7 +6,7 @@ go get github.com/walkerxy/go-seed
 
 # Quick Start
 在目录下新建一个conf.yaml配置数据库信息
-- 
+``` 
 database:
     host: "192.168.1.1"
     port: "3306"
@@ -14,3 +14,4 @@ database:
     username: root
     password: 
     table_prefix: ""
+```
